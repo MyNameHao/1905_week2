@@ -25,3 +25,9 @@ Route::post ('/test/login','Test\UserController@login');
 Route::get ('/test/index','Test\UserController@index')->middleware('RefreshRedis');
 Route::get('/test/ascii','Test\TestController@ascii');
 Route::get('/test/unascii','Test\TestController@unascii');
+
+
+
+//test
+Route::get('/test/testget','Test\TestController@testget');
+Route::get('/test/testunget','Test\TestController@testunget');

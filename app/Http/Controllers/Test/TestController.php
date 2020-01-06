@@ -36,4 +36,28 @@ class TestController extends Controller
 
 
     }
+
+
+
+    public function testget(){
+       $encrypt=  $_GET['encrypt'];
+        $lengeh=strlen($encrypt);
+//        echo $lengeh;
+        for($i=0;$i<$lengeh;$i++){
+            $ord=ord($encrypt[$i])+3;
+            $chr=chr($ord);
+            echo $chr;
+        }
+    }
+    public function testunget(){
+        $decode=$_GET['decode'];
+        $length=strlen($decode);
+//        echo $length;
+        for($i=0;$i<$length;$i++){
+           $ord=ord($decode[$i])-3;
+            $chr=chr($ord);
+            echo $chr;
+        }
+
+    }
 }
